@@ -3,7 +3,7 @@
 **A simple prototype DLL for 7 Days to Die**
 
 ## Overview
-This project is a minimal proof-of-concept anti-cheat for the game *7 Days to Die*. It hooks XInput by proxying `xinput1_3.dll` and performs the following:
+This project is a minimal proof-of-concept anti-cheat for the game *7 Days to Die*. It hooks XInput by proxying (hijacking) `xinput1_3.dll` and performs the following:
 
 - **Detects known cheat executables and windows** by scanning running processes and visible window titles.
 - **Terminates detected cheat processes** and then closes the game automatically after a 5-second countdown.
@@ -16,7 +16,7 @@ This project is a minimal proof-of-concept anti-cheat for the game *7 Days to Di
 - **Explicit detection lists** for popular trainers and cheat engines:
   - WeMod, Cheat Engine, FLiNG trainer, MrAntiFun, PLITCH, UnknownCheats, and more.
   - Exact entries for trainers like "7 Days to Die Early Access Plus 23 Trainer".
-- **Generic keyword scanning** for any process containing substrings like `trainer`, `cheat`, `hack`, `mod`, etc.
+- **Generic keyword scanning** for any process containing substrings like `trainer`, `cheat`, `hack`, etc.
 - **Window title checks** against known cheat window fragments.
 - **Auto-close**: Schedules the game to exit 5 seconds after a cheat is detected, even if the warning dialog is not dismissed.
 - **Debug command (`verify`)**: Type `V-E-R-I-F-Y` at any time to pop up a "DLL Verified" message.
